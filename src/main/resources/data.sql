@@ -1,0 +1,1 @@
+INSERT INTO players (player_id, player_name, team_name, country_id, player_role) VALUES (1, 'Sachin Tendulkar', 'India', '101', 'Batsman');
