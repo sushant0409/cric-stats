@@ -1,6 +1,6 @@
 package com.sushavi.cricstats.service;
 
-import com.sushavi.cricstats.entity.Players;
+import com.sushavi.cricstats.projection.PlayersView;
 import com.sushavi.cricstats.repository.PlayerRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -14,7 +14,7 @@ import java.util.List;
 public class PlayerService {
     private final PlayerRepository playerRepository;
 
-    public List<Players> showPlayers() {
-        return (List<Players>)playerRepository.findAll();
+    public List<PlayersView> showPlayers() {
+        return playerRepository.getPlayers();
     }
 }

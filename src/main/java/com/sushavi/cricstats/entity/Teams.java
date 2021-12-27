@@ -12,22 +12,13 @@ import javax.persistence.Id;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Players {
+public class Teams {
     @Id
-    @Column(name = "player_id")
-    private Long playerId;
-
-    @Column(name = "player_name")
-    private String playerName;
-
     @Column(name = "team_id")
     private Long teamId;
 
-    @Column(name = "country_cd")
-    private String countryCd;
-
-    @Column(name = "role_id")
-    private Long role_id;
+    @Column(name = "team_name")
+    private String teamName;
 
     @Column(name = "in_active")
     private String inActive;

@@ -1,6 +1,6 @@
 package com.sushavi.cricstats.controller;
 
-import com.sushavi.cricstats.entity.Players;
+import com.sushavi.cricstats.projection.PlayersView;
 import com.sushavi.cricstats.service.PlayerService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -16,7 +16,7 @@ public class PlayerController {
     private final PlayerService playerService;
 
     @GetMapping("/showPlayers")
-    public List<Players> showRecords() {
+    public List<PlayersView> showRecords() {
         return playerService.showPlayers();
     }
 }
