@@ -17,6 +17,7 @@ public class PlayerController {
 
     @GetMapping("/showPlayers")
     public List<PlayersView> showRecords() {
+        log.info("Inside showRecords");
         return playerService.showPlayers();
     }
 }
