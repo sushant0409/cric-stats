@@ -1,8 +1,10 @@
 package com.sushavi.cricstats.controller;
 
+import com.sushavi.cricstats.aspect.LogExecutionTime;
 import com.sushavi.cricstats.projection.PlayersView;
 import com.sushavi.cricstats.service.PlayerService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +17,7 @@ import java.util.List;
 public class PlayerController {
     private final PlayerService playerService;
 
+    @LogExecutionTime
     @GetMapping("/showPlayers")
     public List<PlayersView> showRecords() {
         log.info("Inside showRecords");
